@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b100e6da.chunk.css",
-    "main.js": "/static/js/main.046a9c62.chunk.js",
-    "main.js.map": "/static/js/main.046a9c62.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.01efe4f8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.01efe4f8.js.map",
-    "static/js/2.8a306c00.chunk.js": "/static/js/2.8a306c00.chunk.js",
-    "static/js/2.8a306c00.chunk.js.map": "/static/js/2.8a306c00.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.af5adfdcd6fa31777e2052df33967373.js": "/precache-manifest.af5adfdcd6fa31777e2052df33967373.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b100e6da.chunk.css.map": "/static/css/main.b100e6da.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.25bf045c.svg"
+    "main.css": "/clubhouse-tracker/static/css/main.b100e6da.chunk.css",
+    "main.js": "/clubhouse-tracker/static/js/main.e01ba65a.chunk.js",
+    "main.js.map": "/clubhouse-tracker/static/js/main.e01ba65a.chunk.js.map",
+    "runtime-main.js": "/clubhouse-tracker/static/js/runtime-main.bbd5a2f5.js",
+    "runtime-main.js.map": "/clubhouse-tracker/static/js/runtime-main.bbd5a2f5.js.map",
+    "static/js/2.8a306c00.chunk.js": "/clubhouse-tracker/static/js/2.8a306c00.chunk.js",
+    "static/js/2.8a306c00.chunk.js.map": "/clubhouse-tracker/static/js/2.8a306c00.chunk.js.map",
+    "index.html": "/clubhouse-tracker/index.html",
+    "precache-manifest.ca9373a7f08e18fbfc9a22be0ad023c8.js": "/clubhouse-tracker/precache-manifest.ca9373a7f08e18fbfc9a22be0ad023c8.js",
+    "service-worker.js": "/clubhouse-tracker/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/clubhouse-tracker/static/css/main.b100e6da.chunk.css.map",
+    "static/media/logo.svg": "/clubhouse-tracker/static/media/logo.25bf045c.svg"
   }
 }
