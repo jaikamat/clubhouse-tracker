@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import CreateTable from './CreateTable';
-import { Container, Table, Grid } from 'semantic-ui-react';
+import { Container, Header, Grid, Divider } from 'semantic-ui-react';
 
 class App extends React.Component {
     state = { inventory_in: [], inventory_out: [] };
@@ -25,6 +25,16 @@ class App extends React.Component {
 
         return (
             <Container style={{ marginTop: '20px' }}>
+                <Header inverted as="h1">
+                    <Header.Content>
+                        <em>"Got a lot of good things on sale, stranger"</em>
+                        <Header.Subheader>
+                            The Clubhouse's daily Magic: The Gathering singles intake and sales, at
+                            a glance
+                        </Header.Subheader>
+                    </Header.Content>
+                </Header>
+                <Divider />
                 <Grid stackable>
                     <Grid.Row columns={2}>
                         <Grid.Column>
