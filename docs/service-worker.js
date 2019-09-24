@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/clubhouse-tracker/precache-manifest.9944ab03b9e14cb63ef4262c1b3118ee.js"
+  "/clubhouse-tracker/precache-manifest.bfee868c63e05407419b456121f30b78.js"
 );
 
 self.addEventListener('message', (event) => {

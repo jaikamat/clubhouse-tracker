@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19082a3d634c2ef1c333798f49194dd0",
+    "revision": "82a1c95b8cd0006a18457dd2c8b7736f",
     "url": "/clubhouse-tracker/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clubhouse-tracker/static/js/2.033804bd.chunk.js"
   },
   {
-    "revision": "8691ad1c3cd08b39ff06",
-    "url": "/clubhouse-tracker/static/js/main.49f93733.chunk.js"
+    "revision": "cf6d587f2a1e4df70d4c",
+    "url": "/clubhouse-tracker/static/js/main.1c5cfc09.chunk.js"
   },
   {
     "revision": "ff6a9e973b0ac6c80bdc",
