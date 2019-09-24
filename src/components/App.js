@@ -37,10 +37,10 @@ class App extends React.Component {
                 <Grid stackable>
                     <Grid.Row columns={2}>
                         <Grid.Column>
-                            <CreateTable headerText={'Inventory in'} data={inv_in} />
+                            <CreateTable headerText={'Cards received'} data={inv_in} />
                         </Grid.Column>
                         <Grid.Column>
-                            <CreateTable headerText={'Inventory out'} data={inv_out} />
+                            <CreateTable headerText={'Cards sold'} data={inv_out} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
