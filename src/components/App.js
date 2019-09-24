@@ -14,8 +14,6 @@ class App extends React.Component {
         const inventory_in = Object.entries(res.data.inventory_in);
         const inventory_out = Object.entries(res.data.inventory_out);
 
-        console.log(inventory_in, inventory_out);
-
         this.setState({ inventory_in: inventory_in, inventory_out: inventory_out });
     }
 
@@ -28,6 +26,7 @@ class App extends React.Component {
                 <Header inverted as="h1">
                     <Header.Content>
                         <em>"Got a lot of good things on sale, stranger"</em>
+                        <i class="ss ss-pmei ss-2x ss-uncommon"></i>
                         <Header.Subheader>
                             The Clubhouse's daily Magic: The Gathering singles intake and sales, at
                             a glance

@@ -3,7 +3,6 @@ import { Table } from 'semantic-ui-react';
 
 const TableRow = props => {
     const cardRowData = props.cardData;
-    console.log(cardRowData);
 
     return (
         <Table.Row>
