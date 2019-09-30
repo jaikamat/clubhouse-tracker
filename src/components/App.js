@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import CreateTable from './CreateTable';
+import SearchBar from './Search';
 import { Container, Header, Grid, Divider } from 'semantic-ui-react';
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
                 <Header inverted as="h1">
                     <Header.Content>
                         <em>"Got a lot of good things on sale, stranger"</em>
-                        <i class="ss ss-pmei ss-2x ss-uncommon"></i>
+                        <i className="ss ss-pmei ss-2x ss-uncommon"></i>
                         <Header.Subheader>
                             The Clubhouse's daily Magic: The Gathering singles intake and sales, at
                             a glance
@@ -34,6 +35,14 @@ class App extends React.Component {
                     </Header.Content>
                 </Header>
                 <Divider />
+                <Header inverted as="h3">
+                    <Header.Content>Search for a card:</Header.Content>
+                </Header>
+                <SearchBar />
+                <Divider />
+                <Header inverted as="h3">
+                    <Header.Content>Yesterday's movement:</Header.Content>
+                </Header>
                 <Grid stackable>
                     <Grid.Row columns={2}>
                         <Grid.Column>
