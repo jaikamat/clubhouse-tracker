@@ -19,8 +19,7 @@ class App extends React.Component {
     }
 
     render() {
-        const inv_in = this.state.inventory_in;
-        const inv_out = this.state.inventory_out;
+        const { inventory_in, inventory_out } = this.state;
 
         return (
             <Container style={{ marginTop: '20px' }}>
@@ -46,10 +45,10 @@ class App extends React.Component {
                 <Grid stackable>
                     <Grid.Row columns={2}>
                         <Grid.Column>
-                            <CreateTable headerText={'Cards received'} data={inv_in} />
+                            <CreateTable headerText={'Cards received'} data={inventory_in} />
                         </Grid.Column>
                         <Grid.Column>
-                            <CreateTable headerText={'Cards sold'} data={inv_out} />
+                            <CreateTable headerText={'Cards sold'} data={inventory_out} />
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
