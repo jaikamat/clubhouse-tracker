@@ -2,10 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import CreateTable from './CreateTable';
 import SearchBar from './Search';
+import DateRangePicker from './DateRangePicker';
 import { Container, Header, Grid, Divider } from 'semantic-ui-react';
 
 class App extends React.Component {
-    state = { inventory_in: [], inventory_out: [] };
+    state = {
+        inventory_in: [],
+        inventory_out: []
+    };
 
     async componentDidMount() {
         const res = await axios.get(
@@ -17,6 +21,11 @@ class App extends React.Component {
 
         this.setState({ inventory_in: inventory_in, inventory_out: inventory_out });
     }
+
+    searchHistoricalData = (date1, date2) => {
+        console.log(date1, date2);
+        console.log('fetching res from API!');
+    };
 
     render() {
         const { inventory_in, inventory_out } = this.state;
@@ -41,6 +50,7 @@ class App extends React.Component {
                 <Divider />
                 <Header inverted as="h3">
                     <Header.Content>Yesterday's movement:</Header.Content>
+                    <DateRangePicker submit={this.searchHistoricalData} />
                 </Header>
                 <Grid stackable>
                     <Grid.Row columns={2}>
