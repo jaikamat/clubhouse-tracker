@@ -8,27 +8,32 @@ import { Container, Header, Grid, Divider } from 'semantic-ui-react';
 class App extends React.Component {
     state = {
         inventory_in: [],
-        inventory_out: []
+        inventory_out: [],
+        searched: false
     };
 
-    async componentDidMount() {
-        const res = await axios.get(
-            'https://us-central1-clubhouse-inventory-tracker.cloudfunctions.net/retrieveChangeDataFromDB'
+    searchHistoricalData = async (date1, date2) => {
+        const { data } = await axios.get(
+            'https://us-central1-clubhouse-inventory-tracker.cloudfunctions.net/retrieveHistoricDateRange',
+            {
+                params: {
+                    date1,
+                    date2
+                }
+            }
         );
 
-        const inventory_in = Object.entries(res.data.inventory_in);
-        const inventory_out = Object.entries(res.data.inventory_out);
+        const { inventory_in, inventory_out } = data;
 
-        this.setState({ inventory_in: inventory_in, inventory_out: inventory_out });
-    }
-
-    searchHistoricalData = (date1, date2) => {
-        console.log(date1, date2);
-        console.log('fetching res from API!');
+        this.setState({
+            inventory_in: Object.entries(inventory_in),
+            inventory_out: Object.entries(inventory_out),
+            searched: true
+        });
     };
 
     render() {
-        const { inventory_in, inventory_out } = this.state;
+        const { inventory_in, inventory_out, searched } = this.state;
 
         return (
             <Container style={{ marginTop: '20px' }}>
@@ -49,19 +54,20 @@ class App extends React.Component {
                 <SearchBar />
                 <Divider />
                 <Header inverted as="h3">
-                    <Header.Content>Yesterday's movement:</Header.Content>
                     <DateRangePicker submit={this.searchHistoricalData} />
                 </Header>
-                <Grid stackable>
-                    <Grid.Row columns={2}>
-                        <Grid.Column>
-                            <CreateTable headerText={'Cards received'} data={inventory_in} />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <CreateTable headerText={'Cards sold'} data={inventory_out} />
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
+                {searched && (
+                    <Grid stackable>
+                        <Grid.Row columns={2}>
+                            <Grid.Column>
+                                <CreateTable headerText={'Cards received'} data={inventory_in} />
+                            </Grid.Column>
+                            <Grid.Column>
+                                <CreateTable headerText={'Cards sold'} data={inventory_out} />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                )}
             </Container>
         );
     }

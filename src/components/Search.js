@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import { Search, Grid, Header, Label } from 'semantic-ui-react';
+import { Search, Grid, Header } from 'semantic-ui-react';
 
 class SearchBar extends React.Component {
     state = {
