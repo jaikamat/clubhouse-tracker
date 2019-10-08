@@ -5,6 +5,13 @@ import SearchBar from './Search';
 import DateRangePicker from './DateRangePicker';
 import { Container, Header, Grid, Divider } from 'semantic-ui-react';
 
+// Maps the API response data into something usable for front-end sorting
+const transformData = data => {
+    return data.map(d => {
+        return { name: d[0], qty: d[1] };
+    });
+};
+
 class App extends React.Component {
     state = {
         inventory_in: [],
@@ -13,21 +20,18 @@ class App extends React.Component {
     };
 
     searchHistoricalData = async (date1, date2) => {
-        const { data } = await axios.get(
-            'https://us-central1-clubhouse-inventory-tracker.cloudfunctions.net/retrieveHistoricDateRange',
-            {
-                params: {
-                    date1,
-                    date2
-                }
+        const { data } = await axios.get('http://localhost:8080', {
+            params: {
+                date1,
+                date2
             }
-        );
+        });
 
         const { inventory_in, inventory_out } = data;
 
         this.setState({
-            inventory_in: Object.entries(inventory_in),
-            inventory_out: Object.entries(inventory_out),
+            inventory_in: inventory_in,
+            inventory_out: inventory_out,
             searched: true
         });
     };
