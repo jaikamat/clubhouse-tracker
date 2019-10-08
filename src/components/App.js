@@ -20,12 +20,15 @@ class App extends React.Component {
     };
 
     searchHistoricalData = async (date1, date2) => {
-        const { data } = await axios.get('http://localhost:8080', {
-            params: {
-                date1,
-                date2
+        const { data } = await axios.get(
+            'https://us-central1-clubhouse-inventory-tracker.cloudfunctions.net/retrieveHistoricDateRange',
+            {
+                params: {
+                    date1,
+                    date2
+                }
             }
-        });
+        );
 
         const { inventory_in, inventory_out } = data;
 
